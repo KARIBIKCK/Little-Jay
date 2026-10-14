@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080807">
+<meta name="description" content="Little Jay Barbering Shop — sharp cuts, clean fades, unmatched confidence. Book a shop visit or request a home service in selected areas around Buguma, Rivers State.">
+<title>Little Jay Barbering Shop | Sharp Cuts. Clean Fades.</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+ <div class="container nav">
+  <a class="brand" href="#home" aria-label="Little Jay Barbering Shop home"><span class="brand-mark">J</span><span><strong>LITTLE JAY</strong><small>BARBERING SHOP</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+  <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+   <a class="active" href="#home">Home</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#work">Our Work</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </nav>
+  <a class="btn btn-outline nav-book" href="#booking">◉ &nbsp; Book Now</a>
+ </div>
+</header>
+<main>
+<section class="hero" id="home">
+ <img class="hero-bg" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=2000&q=85" alt="Modern barbershop interior" fetchpriority="high">
+ <div class="container"><div class="hero-content">
+  <div class="eyebrow">Welcome to</div><h1>LITTLE JAY<span>BARBERING SHOP</span></h1>
+  <div class="hero-tagline">Sharp Cuts. <span class="gold">Clean Fades.</span> Unmatched Confidence.</div>
+  <p>Professional barbering and grooming services at our shop or in the comfort of your home. Quality, style and satisfaction — always.</p>
+  <div class="hero-actions"><a class="btn" href="#services">▦ &nbsp; Explore Services</a><a class="btn btn-outline" href="#booking" data-home-service="true">⌂ &nbsp; Request Home Service</a><a class="btn btn-outline" href="#work">◎ &nbsp; Explore Our Work</a></div>
+ </div></div><div class="hero-note"><b>♕</b>Good Hair<br>Good Vibes</div>
+</section>
+<section id="services"><div class="container">
+ <div class="services-top"><div><div class="eyebrow">Our Services</div><h2>Haircuts &amp; Grooming</h2><p class="section-intro">Choose from a wide range of styles and services, all tailored to your look and personality.</p></div><div class="trust-row"><span><b>✂</b> Professional Barbers</span><span><b>♧</b> Clean &amp; Safe</span><span><b>☆</b> Quality Products</span><span><b>☺</b> Customer Care</span></div></div>
+ <div class="service-grid" id="serviceGrid"></div>
+ <p style="font-size:.72rem;color:#a9a398;margin:12px 0 0">* Prices shown are sample prices for development and must be confirmed by Little Jay before launch.</p>
+</div></section>
+<section class="booking-section" id="booking"><div class="container">
+ <div class="booking-layout">
+  <aside class="info-panel"><div class="eyebrow">Home Service</div><h2 style="font-size:1.4rem">We bring the barbershop to you</h2><p>Enjoy professional grooming at your convenience. Request a home service and Little Jay will review your location and appointment request.</p>
+   <div class="location-list"><h4>⌖ Service areas &amp; location charges</h4><div class="location-line"><span>At the Shop</span><span>No extra charge</span></div><div class="location-line"><span>Buguma City</span><span>+₦1,000</span></div><div class="location-line"><span>Ido</span><span>+₦1,000</span></div><div class="location-line"><span>Abalama</span><span>+₦2,000</span></div><div class="location-line"><span>Tema</span><span>+₦2,000</span></div><div class="location-line"><span>Degema</span><span>+₦2,000</span></div><div class="location-line"><span>Other locations</span><span>Confirm first</span></div></div>
+   <div class="notice">ⓘ Home-service availability in unlisted areas must be confirmed directly. Location charges are not transportation fares.</div>
+  </aside>
+  <form class="booking-form" id="bookingForm" novalidate>
+   <h3>⌂ &nbsp; Book an appointment</h3><div class="form-step">● Service &amp; Location &nbsp; ───── &nbsp; ② Your Details &nbsp; ───── &nbsp; ③ Review &amp; Send</div>
+   <div class="form-grid">
+    <div class="field full"><label for="serviceSelect">Select Service <em>*</em></label><select id="serviceSelect" required></select></div>
+    <div class="field full"><label>Service Type <em>*</em></label><div class="radio-row"><label class="radio-choice"><input type="radio" name="serviceType" value="shop" checked> Visit Our Shop</label><label class="radio-choice"><input type="radio" name="serviceType" value="home"> Home Service</label></div></div>
+    <div class="field full hidden" id="locationField"><label for="town">Town / Location <em>*</em></label><select id="town"><option value="">Select your town</option><option>Buguma City</option><option>Ido</option><option>Abalama</option><option>Tema</option><option>Degema</option><option value="Other Location">Other Location</option></select><small id="locationMessage">Choose your community to calculate the location charge.</small></div>
+    <div class="field full hidden home-field"><label for="fullAddress">Full Address <em>*</em></label><input id="fullAddress" placeholder="House number, street, area..." autocomplete="street-address"></div>
+    <div class="field hidden home-field"><label for="streetArea">Street or Area <em>*</em></label><input id="streetArea" placeholder="Street / neighbourhood"></div>
+    <div class="field hidden home-field"><label for="landmark">Nearest Landmark <em>*</em></label><input id="landmark" placeholder="Nearby shop, church, junction..."></div>
+    <div class="field full hidden home-field"><label for="houseDescription">Describe Your House and Surroundings <em>*</em></label><textarea id="houseDescription" placeholder="Describe the colour of your house, type of gate, nearby shops, churches, schools, junctions or landmarks. Example: A cream-coloured house with a blue gate, opposite a provision shop, close to the main junction."></textarea><small>A clear description helps the barber locate you.</small></div>
+    <div class="field full hidden home-field"><label for="housePhoto">Optional: Add a Photo of Your House or Surroundings</label><input id="housePhoto" type="file" accept="image/*" capture="environment"><small>Image only, maximum 5 MB. The image is previewed locally and is not uploaded to a server.</small><div class="upload-preview hidden" id="photoPreviewWrap"><img id="photoPreview" alt="Preview of selected house"><button type="button" class="btn btn-outline btn-small" id="removePhoto" style="width:auto">Remove photo</button></div></div>
+    <div class="field"><label for="customerName">Full Name <em>*</em></label><input id="customerName" required autocomplete="name" placeholder="Your full name"></div>
+    <div class="field"><label for="customerPhone">Your Phone Number <em>*</em></label><input id="customerPhone" required type="tel" autocomplete="tel" placeholder="Your active phone number"></div>
+    <div class="field"><label for="appointmentDate">Preferred Date <em>*</em></label><input id="appointmentDate" required type="date"></div>
+    <div class="field"><label for="appointmentTime">Preferred Time <em>*</em></label><input id="appointmentTime" required type="time"></div>
+    <div class="field full"><label for="instructions">Additional Instructions</label><textarea id="instructions" placeholder="Any style preferences or extra details?"></textarea></div>
+   </div>
+   <div class="form-error" id="formError" role="alert"></div>
+  </form>
+  <aside class="summary"><div class="summary-title"><h3>Booking Summary</h3><span class="gold">♧</span></div>
+   <div class="summary-row"><span>Selected service</span><strong id="sumService">Low Cut</strong></div><div class="summary-row"><span>Service type</span><strong id="sumType">Shop Visit</strong></div><div class="summary-row"><span>Haircut cost</span><strong id="sumCost">₦1,500</strong></div><div class="summary-row"><span>Location</span><strong id="sumLocation">Little Jay Barbering Shop</strong></div><div class="summary-row"><span>Location charge</span><strong id="sumCharge">₦0</strong></div><div class="summary-total"><span>Total estimate</span><strong id="sumTotal">₦1,500</strong></div>
+   <button class="btn" id="whatsappSubmit" type="submit" form="bookingForm">☏ &nbsp; Book Now on WhatsApp</button><a class="btn btn-outline" href="#contact" style="width:100%">Contact Little Jay</a><p class="summary-note">Your request is not confirmed until Little Jay responds. If you attach a house photo, WhatsApp may require you to attach it manually after it opens.</p>
+  </aside>
+ </div>
+</div></section>
+<section id="gallery"><div class="container"><div class="section-heading-row"><div><div class="eyebrow">Find Your Style</div><h2>Haircut Gallery</h2><p class="section-intro">Explore style examples, choose a look, then continue to booking.</p></div><a class="btn btn-outline" href="#services">View all services →</a></div><div class="gallery-grid" id="galleryGrid"></div></div></section>
+<section id="work"><div class="container"><div class="section-heading-row"><div><div class="eyebrow">Our Work</div><h2>Our Work Speaks for Itself.</h2><p class="section-intro">Every cut tells a story. Every detail matters. Explore barbering styles and transformations.</p></div><a class="btn btn-outline" href="#booking">Book a style →</a></div><div class="portfolio-grid" id="portfolioGrid"></div><p style="color:#aaa398;font-size:.72rem;margin-top:12px">Portfolio images are temporary style examples, not verified photographs of Little Jay's customers or completed work. Replace them with real shop photos before publishing.</p></div></section>
+<section id="about"><div class="container about-grid"><div><div class="eyebrow">About Little Jay</div><h2>More than a haircut. It's a lifestyle.</h2><p class="section-intro">Little Jay Barbering Shop is dedicated to quality, precision and customer satisfaction. Whether you visit our shop or request a home service, our goal is to help you look sharp and feel confident. From classic cuts to modern fades and creative styles, we bring care and attention to every appointment.</p><div class="values"><div class="value"><b>✂ PRECISION</b><p>Attention to detail in every haircut.</p></div><div class="value"><b>⌂ CONVENIENCE</b><p>Home visits in selected service areas.</p></div><div class="value"><b>☆ CUSTOMER CARE</b><p>A friendly, professional experience.</p></div></div></div><img class="about-photo" src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1000&q=80" alt="Barber at work" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=80'"></div></section>
+<section id="contact"><div class="container"><div class="eyebrow">Get in Touch</div><h2>Visit or Contact Us</h2><p class="section-intro">Need assistance choosing a style or checking a home-service area? Contact Little Jay directly.</p><div class="contact-grid"><article class="contact-card"><div class="icon">☏</div><h3>WhatsApp</h3><p id="contactWhatsappText">Business WhatsApp number will be added before launch.</p><button class="btn btn-outline btn-small" data-contact="whatsapp">Chat on WhatsApp</button></article><article class="contact-card"><div class="icon">☎</div><h3>Call Little Jay</h3><p id="contactPhoneText">Business phone number will be added before launch.</p><a class="btn btn-outline btn-small" id="callButton" href="#contact">Call Little Jay</a></article><article class="contact-card"><div class="icon">⌖</div><h3>Shop Address</h3><p>Buguma City, Rivers State, Nigeria.<br><span class="gold">Exact shop address to be added soon.</span></p><a class="btn btn-outline btn-small" id="mapButton" href="#contact">Directions unavailable yet</a></article><article class="contact-card"><div class="icon">◷</div><h3>Opening Hours</h3><p id="hoursText">Opening hours to be confirmed.</p><a class="btn btn-outline btn-small" href="#booking">Request Appointment</a></article></div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><a class="brand" href="#home"><span class="brand-mark">J</span><span><strong>LITTLE JAY</strong><small>BARBERING SHOP</small></span></a><p style="margin-top:12px">Sharp cuts. Clean fades. Unmatched confidence.</p><p>More than just a haircut. It's a lifestyle.</p></div><div><h3>Quick Links</h3><div class="footer-links"><a href="#services">Services &amp; Prices</a><a href="#booking">Book Appointment</a><a href="#gallery">Haircut Gallery</a><a href="#work">Our Work</a><a href="#about">About Us</a></div></div><div><h3>Contact Us</h3><p>Buguma City, Rivers State, Nigeria.</p><p id="footerContact">Contact details to be added before launch.</p><a href="#contact" class="gold">Contact Little Jay →</a></div><div><h3>Book with Confidence</h3><p>Appointments are requests until availability is confirmed by Little Jay.</p><a class="btn" href="#booking">Book Now</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Little Jay Barbering Shop. All rights reserved.</span><span>Premium barbering • Buguma City, Nigeria</span></div></div></footer>
+<div class="floating-actions"><a class="float-btn" href="#booking" aria-label="Book appointment">✂</a><button class="float-btn call" type="button" data-contact="whatsapp" aria-label="WhatsApp Little Jay">☏</button></div>
+<div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-label="Enlarged haircut image"><div class="modal-content"><button class="modal-close" id="modalClose" aria-label="Close image">×</button><img id="modalImage" alt="Enlarged haircut style"></div></div><div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body></html>
